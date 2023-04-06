@@ -8,8 +8,6 @@ import CanvasLoader from '../Loader'
 const Computers = ({ isMobile }) => {
   const computer = useGLTF('./desktop_pc/scene.glb')
 
-  console.log(isMobile);
-
   return (
     <mesh>
       <hemisphereLight
