@@ -12,6 +12,25 @@
   scroll-behavior: smooth;
   color-scheme: dark;
 }
+
+:root {
+  --color-bg: #1f1f38;
+  --color-bg-variant: linear-gradient(135deg, #0e709a 30%, #2197a4);
+  --color-secondary: rgba(45, 203, 251, 0.8);
+  --color-primary: rgba(45, 203, 251, 1);
+  --color-btn-primary: rgba(255, 255, 255, 1);
+  --color-primary-variant: rgb(79, 96, 113);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+  --color-social: linear-gradient(135deg, #0e4d9a 10%, #c267ff, #ff0037);
+
+  --transition: all 400ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
 ::-webkit-scrollbar{
   display: none;
 }
