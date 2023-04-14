@@ -5,7 +5,7 @@ import { FaLinkedinIn } from 'react-icons/fa'
 import { FaInstagram } from 'react-icons/fa'
 
 import logo from '../assets/img/wolf_logo.webp'
-import '../styles/navbar.css'
+import '../styles/Navbar.css'
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home')
