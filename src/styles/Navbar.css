@@ -6,13 +6,21 @@ nav.navbar {
     z-index: 9999;
     transition:  0.32s ease-in-out;
   }
+
   nav.navbar.scrolled {
     padding: 0px 0;
     background-color: #121212;
   }
   nav.navbar a.navbar-brand {
-      width: 9%;
+      width: 5%;
   }
+
+  nav.navbar a.navbar-brand .logoname{
+    color: white;
+    position: relative;
+    left: 10%;
+  }
+
   nav.navbar .navbar-nav .nav-link.navbar-link {
     font-weight: 400;
     color: #fff !important;
@@ -34,6 +42,7 @@ nav.navbar {
       margin-left: 14px;
   }
   .social-icon a {
+    color: white;
       width: 42px;
       height: 42px;
       background: rgba(217, 217, 217, 0.1);
@@ -53,18 +62,35 @@ nav.navbar {
       background-color: #ffffff;
       border-radius: 50%;
       transform: scale(0);
-      transition: 0.3s ease-in-out;
+      transition: 0.4s ease-in-out;
   }
+
+  .social-icon .instagram::before{
+    background:  radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+  }
+
+   .social-icon .linkedin::before {
+    background: rgb(10, 102, 194);
+}
+
   .social-icon a:hover::before {
       transform: scale(1);
   }
-  .social-icon a .img {
+
+  .social-icon a .linkedin,
+  .social-icon a .instagram,
+  .social-icon a .github {
       width: 40%;
       z-index: 1;
       transition: 0.3s ease-in-out;
   }
-  .social-icon a:hover .img {
-      filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+  .social-icon a:hover .linkedin,
+  .social-icon a:hover .instagram{
+    color: #fff;
+}
+
+  .social-icon a:hover .github {
+      color: black;
   }
   .navbar-text button {
     font-weight: 700;
@@ -85,14 +111,14 @@ nav.navbar {
     width: 0%;
     height: 100%;
     position: absolute;
-    background-color: #fff;
+    background-color: rgba(10, 13, 194, 0.1);
     left: 0;
     top: 0;
     z-index: -1;
-    transition: 0.3s ease-in-out;
+    transition: .7s ease-in-out;
   }
   .navbar-text button:hover {
-    color: #121212;
+    color: #ffffff;
   }
   .navbar-text button:hover::before {
       content: "";
