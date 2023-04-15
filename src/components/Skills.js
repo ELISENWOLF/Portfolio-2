@@ -11,7 +11,6 @@ import node from '../assets/img/nodejs.png'
 import mdb from '../assets/img/mongodb.png'
 import sql from '../assets/img/mysql.png'
 import git from '../assets/img/git.png'
-import colorSharp from "../assets/img/color-sharp.png"
 
 import '../styles/skills.css'
 
@@ -90,7 +89,6 @@ const Skills = () => {
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="background" />
     </section>
   )
 }
