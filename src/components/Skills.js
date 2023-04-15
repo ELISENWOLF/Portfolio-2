@@ -13,7 +13,7 @@ import sql from '../assets/img/mysql.png'
 import git from '../assets/img/git.png'
 import colorSharp from "../assets/img/color-sharp.png"
 
-import '../styles/skills.css'
+// import '../styles/skills.css'
 
 const Skills = () => {
   const responsive = {
