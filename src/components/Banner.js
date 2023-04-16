@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
 
-import headerImg from '../assets/img/header-img.svg'
+// import headerImg from '../assets/img/astronaut1.png'
 import CV from '../assets/img/CV.pdf';
 import '../styles/banner.css'
 
@@ -48,6 +48,13 @@ const Banner = () => {
             <Container>
                 <Row className='align-items-center'>
                     <Col xs={12} md={6} xl={7}>
+                        <span className='stars'></span>
+                        <span className='stars'></span>
+                        <span className='stars'></span>
+                        <span className='stars'></span>
+                        <span className='stars'></span>
+                        <span className='stars'></span>
+                        <span className='stars'></span>
                         <span>Welcome to my Portfolio</span>
                         <h1>
                             Hi I'm Aravind,<br /> 
@@ -57,9 +64,6 @@ const Banner = () => {
                         </h1>
                         <p>Hi, I’m a Front-end developer with a knack in ReactJS, Javascript, HTML, CSS, GitHub and NodeJS. I completed product engineering from School of Accelerated Learning (SOAL) and got my BCA degree from Mahatma Gandhi University. I like problem solving and creating art in my free time.</p>
                         <a href={CV} download="Aravind-Resume">Download CV <ArrowRightCircle size={25} /></a>
-                    </Col>
-                    <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt='bannerimage' />
                     </Col>
                 </Row>
             </Container>
