@@ -11,8 +11,8 @@ const ProjectCards = ({ title, imgUrl, github, demo }) => {
             <div className='proj-txt'>
                 <h4>{title}</h4>
                 <div className="proj-btn">
-                    <a href={github}>GitHub</a>
-                    <a href={demo}>Demo</a>
+                    <a href={github} className='github'><span>GitHub</span></a>
+                    <a href={demo} className='demo'><span>Demo</span></a>
                 </div>
             </div>
         </div>

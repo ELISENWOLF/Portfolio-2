@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { ArrowRightCircle } from 'react-bootstrap-icons'
+import TrackVisibility from 'react-on-screen'
+import 'animate.css'
 
 import html from '../assets/img/html.png'
 import css from '../assets/img/css.png'
@@ -74,15 +76,21 @@ const Banner = () => {
                         <span className='stars'></span>
                         <span className='stars'></span>
                         <span className='stars'></span>
-                        <span>Welcome to my Portfolio</span>
-                        <h1>
-                            Hi I'm Aravind,<br /> 
-                            <span className='wrap'>
-                                {text}
-                            </span>
-                        </h1>
-                        <p>Hi, I’m a Front-end developer with a knack in ReactJS, Javascript, HTML, CSS, GitHub and NodeJS. I completed product engineering from School of Accelerated Learning (SOAL) and got my BCA degree from Mahatma Gandhi University. I like problem solving and creating art in my free time.</p>
-                        <a href={CV} download="Aravind-Resume">Download CV <ArrowRightCircle size={25} /></a>
+                        <TrackVisibility>
+                            {({ isVisible }) => 
+                                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>  
+                                    <span>Welcome to my Portfolio</span>
+                                    <h1>
+                                        Hi I'm Aravind,<br /> 
+                                        <span className='wrap'>
+                                            {text}
+                                        </span>
+                                    </h1>
+                                    <p>Hi, I’m a Front-end developer with a knack in ReactJS, Javascript, HTML, CSS, GitHub and NodeJS. I completed product engineering from School of Accelerated Learning (SOAL) and got my BCA degree from Mahatma Gandhi University. I like problem solving and creating art in my free time.</p>
+                                    <a href={CV} download="Aravind-Resume">Download CV <ArrowRightCircle size={25} /></a>
+                                </div>
+                            }
+                        </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img src={headerImgRef.current} alt="Header Img" className='image' style={{width:'350px', height:'350px',opacity:0.8}}/>

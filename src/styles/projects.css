@@ -1,7 +1,7 @@
 .project {
     padding: 80px 0;
     position: relative;
-    background-color: black;
+    background-image: url(../assets/img/color-sharp.jpeg);
   }
   .project h2 {
       font-size: 45px;
@@ -78,8 +78,10 @@
   }
   .proj-imgbx::before {
     content: "";
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
-    opacity: 0.85;
+    background-image: url(../assets/img/dropdown.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
     position: absolute;
     width: 100%;
     height: 0;
@@ -88,7 +90,7 @@
   .proj-imgbx:hover::before {
     height: 100%;
   }
-  .proj-txtx {
+  .proj-txt {
     position: absolute;
     text-align: center;
     top: 65%;
@@ -98,27 +100,55 @@
     opacity: 0;
     width: 100%;
   }
-  .proj-imgbx:hover .proj-txtx {
+  .proj-imgbx:hover .proj-txt {
     top: 50%;
     opacity: 1;
   }
-  .proj-txtx h4 {
-    font-size: 30px;
+  .proj-txt h4 {
+    font-size: 25px;
     font-weight: 700;
     letter-spacing: 0.8px;
     line-height: 1.1em;
   }
-  .proj-txtx span {
-    font-style: italic;
-    font-weight: 400;
-    font-size: 15px;
-    letter-spacing: 0.8px;
+
+  .proj-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 80px;
+    position: relative;
+    transition: 0.3s ease-in-out;
   }
-  .background-image-right {
-    top: 20%;
+  
+  .github, .demo {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.544);
+    border-radius: 5px;
+    position: relative;
+    padding: 5px 25px;
+  }
+
+  .github span, .demo span {
+    z-index: 1;
+    position: relative;
+  }
+  .github:hover, .demo:hover {
+    color: #fff;
+    text-shadow: 2px 3px 5px #000;
+  }
+  .proj-btn a::before {
+    content: "";
+    background: rgba(56, 147, 233, 0.8);
+    width: 0;
+    height: 100%;
     position: absolute;
-    bottom: 0;
-    width: 35%;
-    right: 0;
-    z-index: -4;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: 0.3s ease-in-out;
+  }
+  .proj-btn a:hover::before {
+    width: 100%;
   }

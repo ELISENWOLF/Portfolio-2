@@ -1,4 +1,6 @@
 import { Col, Container, Nav, Row,Tab } from 'react-bootstrap'
+import TrackVisibility from 'react-on-screen'
+import 'animate.css'
 
 import ProjectCards from './ProjectCards'
 import projectimg1 from '../assets/img/project-img1.png'
@@ -16,23 +18,26 @@ const Projects = () => {
         demo:"https://artomic.netlify.app/"
     },
     {
-        title: "Imdb_Clone",
+        title: "IMDB Clone",
         imgUrl:projectimg2,
         github:"https://github.com/ELISENWOLF/IMDB_Clone",
         demo:"https://elisen-emdb.netlify.app/"
     },
     {
-        title: "INSURE_Design",
+        title: "INSURE Design",
         imgUrl:projectimg4,
         github:"https://github.com/ELISENWOLF/Insurance_Plum",
         demo:"https://elisen-chat.netlify.app/"
     },
     {
-        title: "Slack_Clone",
+        title: "Slack Clone",
         imgUrl:projectimg6,
         github:"https://github.com/ELISENWOLF/Slack_Clone",
         demo:"https://elisen-chat.netlify.app/"
-    },
+    }
+  ]
+
+  const projects2 = [
     {
         title: "ACME Frontend Design",
         imgUrl:projectimg8,
@@ -45,11 +50,17 @@ const Projects = () => {
     <section className='project' id='projects'>
         <Container>
             <Row>
-                <Col >
-                    <h2>Projects</h2>
-                    <p>My Recent Works</p>
+                <Col size={12}>
+                    <TrackVisibility>
+                        {({ isVisible }) => 
+                            <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>  
+                                <h2>Projects</h2>
+                                <p>My Recent Works</p>
+                            </div>
+                        }
+                    </TrackVisibility>
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                        <Nav variant="pills" className='nav-pills mb-5 justify-content-center align-items-center id="pills-tab"'>
+                        <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                             <Nav.Item>
                                 <Nav.Link eventKey="first">Tab one</Nav.Link>
                             </Nav.Item>
@@ -76,10 +87,18 @@ const Projects = () => {
                                 </Row>
                             </Tab.Pane>
                             <Tab.Pane eventKey="second">
-                                Lorem Ipsum
+                                {
+                                    projects2.map((item,index) => {
+                                        return(
+                                            <ProjectCards 
+                                                key={index}
+                                                {...item}
+                                            />
+                                            )
+                                    })
+                                }
                             </Tab.Pane>
                             <Tab.Pane eventKey="third">
-                                Lorem Ipsum
                             </Tab.Pane>
                         </Tab.Content>
                     </Tab.Container>

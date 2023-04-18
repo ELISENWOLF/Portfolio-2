@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
-import { FaGithub } from 'react-icons/fa'
-import { FaLinkedinIn } from 'react-icons/fa'
-import { FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
 import logo from '../assets/img/wolf_logo.webp'
 import '../styles/navbar.css'
@@ -46,10 +44,12 @@ const NavBar = () => {
           <span className='navbar-text'>
             <div className='social-icon'>
               <a href='https://linkedin.com/in/elisenwolf/' className='linkedin'><FaLinkedinIn className='linkedin' /></a>
-              <a href='https://github.com/ELISENWOLF' className='github'><FaGithub className='github' /></a>
+              <a href='https://github.com/ELISENWOLF' className='githublogo'><FaGithub className='githublogo' /></a>
               <a href='https://www.instagram.com/elisen_wolf' className='instagram'><FaInstagram className='instagram' /></a>
             </div>
+            <Nav.Link href='#connect'>
             <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+            </Nav.Link>
           </span>
         </Navbar.Collapse>
       </Container>

@@ -86,7 +86,7 @@ nav.navbar {
 
   .social-icon a .linkedin,
   .social-icon a .instagram,
-  .social-icon a .github {
+  .social-icon a .githublogo {
     width: 40%;
     z-index: 1;
     transition: 0.3s ease-in-out;
@@ -96,7 +96,7 @@ nav.navbar {
     color: #fff;
   }
 
-  .social-icon a:hover .github {
+  .social-icon a:hover .githublogo {
     color: black;
   }
   .navbar-text button {
