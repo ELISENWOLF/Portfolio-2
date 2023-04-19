@@ -1,6 +1,8 @@
 .contact {
-    background-image: url(../assets/img/color-sharp.jpeg);
+    background-image: url(../assets/img/background.jpeg);
     padding: 60px 0 200px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .contact img {
     width: 92%;
@@ -103,3 +105,5 @@
   .contact form a:hover::before {
     width: 100%;
   }
+
+  

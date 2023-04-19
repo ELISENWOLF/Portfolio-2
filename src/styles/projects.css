@@ -1,7 +1,9 @@
 .project {
     padding: 80px 0;
     position: relative;
-    background-image: url(../assets/img/color-sharp.jpeg);
+    background-image: url(../assets/img/background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .project h2 {
       font-size: 45px;
@@ -21,7 +23,7 @@
     width: 72%;
     margin: 0 auto;
     border-radius: 50px;
-    background-color: rgb(255 255 255 / 10%);
+    background-color: rgba(33, 27, 27, 0.9);
     overflow: hidden;
   }
   .project .nav.nav-pills .nav-item {
@@ -33,7 +35,8 @@
     padding: 17px 0;
     color: #fff;
     width: 100%;
-    font-size: 17px;
+    font-weight: 700;
+    font-size: 22px;
     letter-spacing: 0.8px;
     font-weight: 500;
     position: relative;
@@ -44,9 +47,10 @@
   .project .nav.nav-pills .nav-link::before {
       content: "";
       position: absolute;
+      color: none;
       width: 0;
       height: 100%;
-      background: linear-gradient(90.21deg, #36aa87 -5.91%, #362fbd 111.58%);
+      background: rgba(141, 138, 138, 0.7);
       top: 0;
       left: 0;
       z-index: -1;
@@ -55,6 +59,11 @@
   .project .nav.nav-pills .nav-link.active::before {
       width: 100% !important;
   }
+
+  .project .nav.nav-pills .nav-link.active {  
+    color: #000 !important;
+  }
+
   .project .nav.nav-pills .nav-link.active {
       border: 1px solid rgba(255, 255, 255, 1);
   }
@@ -123,7 +132,7 @@
     color: #fff;
     font-weight: 700;
     font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.544);
+    background-color: rgba(51, 48, 48, 0.744);
     border-radius: 5px;
     position: relative;
     padding: 5px 25px;
@@ -152,3 +161,5 @@
   .proj-btn a:hover::before {
     width: 100%;
   }
+
+  

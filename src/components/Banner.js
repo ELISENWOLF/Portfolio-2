@@ -14,7 +14,7 @@ import node from '../assets/img/nodejs.png'
 import mdb from '../assets/img/mongodb.png'
 import sql from '../assets/img/mysql.png'
 import git from '../assets/img/git.png'
-import CV from '../assets/img/CV.pdf';
+import CV from '../assets/pdf/CV.pdf';
 import '../styles/banner.css'
 
 const Banner = () => {
@@ -25,7 +25,7 @@ const Banner = () => {
     const [delta, setDelta] = useState(300 - Math.random() * 100)
     const period = 2000
     const imgArray = [html, css, js, react, bootstrap, mui, node,
-    mdb, sql, git]
+        mdb, sql, git]
     const headerImgRef = useRef(html)
 
     useEffect(() => {
@@ -33,7 +33,7 @@ const Banner = () => {
             let random = Math.floor(Math.random() * imgArray.length);
             headerImgRef.current = imgArray[random]
         }, 800)
-        return () => {clearInterval(loop)}
+        return () => { clearInterval(loop) }
     })
 
     useEffect(() => {
@@ -77,11 +77,11 @@ const Banner = () => {
                         <span className='stars'></span>
                         <span className='stars'></span>
                         <TrackVisibility>
-                            {({ isVisible }) => 
-                                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>  
+                            {({ isVisible }) =>
+                                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <span>Welcome to my Portfolio</span>
                                     <h1>
-                                        Hi I'm Aravind,<br /> 
+                                        Hi I'm Aravind,<br />
                                         <span className='wrap'>
                                             {text}
                                         </span>
@@ -93,7 +93,7 @@ const Banner = () => {
                         </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={headerImgRef.current} alt="Header Img" className='image' style={{width:'350px', height:'350px',opacity:0.8}}/>
+                        <img src={headerImgRef.current} alt="Header Img" className='image' style={{ width: '350px', height: '350px', opacity: 0.8 }} />
                     </Col>
                 </Row>
             </Container>

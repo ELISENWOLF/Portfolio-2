@@ -1,0 +1,14 @@
+.music {
+    margin-left: 20px;
+}
+
+.play {
+    color: rgb(107, 103, 103);
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.play:hover {
+    color: #fff;
+}

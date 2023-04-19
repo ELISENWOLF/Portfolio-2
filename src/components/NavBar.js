@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
 import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
+import Music from './Music'
 import logo from '../assets/img/wolf_logo.webp'
 import '../styles/navbar.css'
 
@@ -48,8 +49,9 @@ const NavBar = () => {
               <a href='https://www.instagram.com/elisen_wolf' className='instagram'><FaInstagram className='instagram' /></a>
             </div>
             <Nav.Link href='#connect'>
-            <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+              <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
             </Nav.Link>
+            <Music />
           </span>
         </Navbar.Collapse>
       </Container>
