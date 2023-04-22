@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { BsWhatsapp } from 'react-icons/bs'
 import emailjs from '@emailjs/browser'
+import TrackVisibility from 'react-on-screen';
+import 'animate.css';
 
 import contactImg from '../assets/img/contact-img.svg'
 import '../styles/contact.css'
@@ -36,41 +38,55 @@ const Contact = () => {
       <Container>
         <Row className='align-items-center'>
           <Col md={6}>
-            <img src={contactImg} alt='Contact Us' />
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__slideInDown animate_slower" : ""}>
+                  <img src={contactImg} alt='Contact Us' />
+                </div>
+              }
+            </TrackVisibility>
           </Col>
           <Col md={6}>
-            <h2>Get In Touch</h2>
-            <form ref={form} onSubmit={handelSubmit}>
-              <Row>
-                <Col sm={12} className='px-1'>
-                  <input type="email" name="email" placeholder='Your Email' required />
-                </Col>
-                <Col sm={6} className='px-1'>
-                  <input type="text" name='name' placeholder='Your Full Name' required />
-                </Col>
-                <Col sm={6} className='px-1'>
-                  <input type='tel' name="number" placeholder='Phone No.' required />
-                </Col>
-                <Col sm={12} className='px-1'>
-                  <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
-                </Col>
-                <Col sm={4} className='px-1'>
-                  <button type='submit'><span>{buttonText}</span></button>
-                </Col>
-                <Col sm={4} className='px-1'>
-                  <a href='https://wa.me/+918129831054'>
-                    <span className='whatsapp'><BsWhatsapp /></span>
-                  </a>
-                </Col>
-                {
-                  status.message &&
-                  <Col>
-                    <p className={status.result === false ? "danger" : "success"}>{status.mess
-                    }</p>
-                  </Col>
-                }
-              </Row>
-            </form>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__slideInUp animate_slower" : ""}>
+                  <h2>Get In Touch</h2>
+                  <form ref={form} onSubmit={handelSubmit}>
+                    <Row>
+                      <Col sm={12} className='px-1'>
+                        <input type="email" name="email" placeholder='Your Email' required />
+                      </Col>
+                      <Col sm={6} className='px-1'>
+                        <input type="text" name='name' placeholder='Your Full Name' required />
+                      </Col>
+                      <Col sm={6} className='px-1'>
+                        <input type='tel' name="number" placeholder='Phone No.' required />
+                      </Col>
+                      <Col sm={12} className='px-1'>
+                        <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
+                      </Col>
+                      <Col xxl={6} xl={12} sm={12} className='px-1 contact-btn'>
+                        <div>
+                        <button type='submit'><span>{buttonText}</span></button>
+                        </div>
+                        <div>
+                        <a href='https://wa.me/+918129831054'>
+                          <span className='whatsapp'><BsWhatsapp /></span>
+                        </a>
+                        </div>
+                      </Col>
+                      {
+                        status.message &&
+                        <Col>
+                          <p className={status.result === false ? "danger" : "success"}>{status.mess
+                          }</p>
+                        </Col>
+                      }
+                    </Row>
+                  </form>
+                </div>
+              }
+            </TrackVisibility>
           </Col>
         </Row>
       </Container>

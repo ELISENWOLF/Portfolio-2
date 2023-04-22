@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
-import { FaGithub, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
 import Music from './Music'
 import logo from '../assets/img/wolf_logo.webp'
@@ -31,7 +30,7 @@ const NavBar = () => {
     <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
       <Container>
         <Navbar.Brand href="#home">
-          <img src={logo} alt='Logo' /><span className='logoname'>Elisenwolf</span>
+          <img src={logo} alt='Logo' />&nbsp;<span className='logoname'>Elisenwolf</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span className='navbar-toggler-icon'></span>
@@ -43,13 +42,8 @@ const NavBar = () => {
             <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
           </Nav>
           <span className='navbar-text'>
-            <div className='social-icon'>
-              <a href='https://linkedin.com/in/elisenwolf/' className='linkedin'><FaLinkedinIn className='linkedin' /></a>
-              <a href='https://github.com/ELISENWOLF' className='githublogo'><FaGithub className='githublogo' /></a>
-              <a href='https://www.instagram.com/elisen_wolf' className='instagram'><FaInstagram className='instagram' /></a>
-            </div>
             <Nav.Link href='#connect'>
-              <button className='vvd' onClick={() => console.log('connect')}><span>Let's Connect</span></button>
+              <button className='vvd'><span>Let's Connect</span></button>
             </Nav.Link>
             <Music />
           </span>
