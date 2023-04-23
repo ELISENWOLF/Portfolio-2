@@ -1,7 +1,5 @@
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import TrackVisibility from 'react-on-screen';
-import 'animate.css';
 
 import html from '../assets/img/html.png'
 import css from '../assets/img/css.png'
@@ -42,58 +40,53 @@ const Skills = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <TrackVisibility>
-                            {({ isVisible }) =>
-                                <div className={isVisible ? "animate__animated animate__fadeIn animate_slower" : ""}>
-                                    <div className="skill-bx wow zoomIn">
-                                        <h2>Skills</h2>
-                                        <p>What i have learned so far.</p>
-                                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                                            <div className="item">
-                                                <img src={html} alt="HTML" />
-                                                <h5>HTML</h5>
-                                            </div>
-                                            <div className="item">
-                                                <img src={css} alt="CSS" />
-                                                <h5>CSS</h5>
-                                            </div>
-                                            <div className="item">
-                                                <img src={js} alt="JavaScript" />
-                                                <h5>JavaScript</h5>
-                                            </div>
-                                            <div className="item">
-                                                <img src={react} alt="React" />
-                                                <h5>React Js</h5>
-                                            </div>
-                                            <div className="item">
-                                                <img src={bootstrap} alt="BootStrap" />
-                                                <h5>Bootstrap</h5>
-                                            </div>
-                                            <div className="item">
-                                                <img src={mui} alt="MUI" />
-                                                <h5>Material UI</h5>
-                                            </div>
-                                            <div className="item">
-                                                <img src={node} alt="Node" />
-                                                <h5>Node Js</h5>
-                                            </div>
-                                            <div className="item">
-                                                <img src={mdb} alt="MongoDB" />
-                                                <h5>MongoDB</h5>
-                                            </div>
-                                            <div className="item">
-                                                <img src={sql} alt="SQL" />
-                                                <h5>MySQL</h5>
-                                            </div>
-                                            <div className="item">
-                                                <img src={git} alt="Git" />
-                                                <h5>Git</h5>
-                                            </div>
-                                        </Carousel>
-                                    </div>
+                        <div className="skill-bx wow zoomIn">
+                            <h2>Skills</h2>
+                            <p>What i have learned so far.</p>
+                            <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                                <div className="item">
+                                    <img src={html} alt="HTML" />
+                                    <h5>HTML</h5>
                                 </div>
-                            }
-                        </TrackVisibility>
+                                <div className="item">
+                                    <img src={css} alt="CSS" />
+                                    <h5>CSS</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={js} alt="JavaScript" />
+                                    <h5>JavaScript</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={react} alt="React" />
+                                    <h5>React Js</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={bootstrap} alt="BootStrap" />
+                                    <h5>Bootstrap</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={mui} alt="MUI" />
+                                    <h5>Material UI</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={node} alt="Node" />
+                                    <h5>Node Js</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={mdb} alt="MongoDB" />
+                                    <h5>MongoDB</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={sql} alt="SQL" />
+                                    <h5>MySQL</h5>
+                                </div>
+                                <div className="item">
+                                    <img src={git} alt="Git" />
+                                    <h5>Git</h5>
+                                </div>
+                            </Carousel>
+                        </div>
+
                     </div>
                 </div>
             </div>
