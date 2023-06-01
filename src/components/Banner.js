@@ -16,6 +16,7 @@ import CV from '../assets/pdf/CV.pdf';
 import '../styles/banner.css'
 
 const Banner = () => {
+    const [headerImgRef, sethHeaderImgRef] = useState(react)
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false)
     const toRotate = ['Frontend Developer', 'Web Developer', 'React Developer']
@@ -24,22 +25,11 @@ const Banner = () => {
     const period = 2000
     const imgArray = [html, css, js, react, bootstrap, mui, node,
         mdb, sql, git]
-    const headerImgRef = useRef(html)
 
-    useEffect(() => {
-        let loop = setInterval(() => {
-            let random = Math.floor(Math.random() * imgArray.length);
-            headerImgRef.current = imgArray[random]
-        }, 800)
-        return () => { clearInterval(loop) }
-    })
-
-    useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta)
-        return () => { clearInterval(ticker) }
-    })
+    const imgRender = () => {
+        const imgArr_Value = Math.floor(Math.random() * 10)
+        sethHeaderImgRef(imgArray[imgArr_Value])
+    }
 
     const tick = () => {
         let i = loopNum % toRotate.length;
@@ -61,6 +51,16 @@ const Banner = () => {
             setDelta(500)
         }
     }
+
+    useEffect(() => {
+        const ticker = setInterval(tick, delta)
+        const img = setInterval(imgRender, 1000)
+
+        return () => {
+            clearInterval(ticker)
+            clearInterval(img)
+        }
+    })
 
     return (
         <section className='banner' id='home'>
@@ -88,7 +88,7 @@ const Banner = () => {
                     </Col>
                     
                     <Col xs={12} md={6} xl={5} className='right-banner'>
-                        <img src={headerImgRef.current} alt="Header Img" className='image' />
+                        <img src={headerImgRef} alt="Header Img" className='image' />
                     </Col>
                 </Row>
             </Container>

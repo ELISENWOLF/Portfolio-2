@@ -11,6 +11,7 @@ import node from '../assets/img/nodejs.png'
 import mdb from '../assets/img/mongodb.png'
 import sql from '../assets/img/mysql.png'
 import git from '../assets/img/git.png'
+import man from '../assets/img/man_peek.png'
 
 import '../styles/skills.css'
 
@@ -40,6 +41,9 @@ const Skills = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
+                        <div className='img'>
+                            <img src={man} alt='peek' />
+                        </div>
                         <div className="skill-bx wow zoomIn">
                             <h2>Skills</h2>
                             <p>What i have learned so far.</p>
@@ -86,7 +90,6 @@ const Skills = () => {
                                 </div>
                             </Carousel>
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -35,10 +35,7 @@ const Contact = () => {
     <section className='contact' id='connect'>
       <Container>
         <Row className='align-items-center'>
-          <Col md={6}>
-            <img src={contactImg} alt='Contact Us' />
-          </Col>
-          <Col md={6}>
+        <Col md={6}>
             <h2>Get In Touch</h2>
             <form ref={form} onSubmit={handelSubmit}>
               <Row>
@@ -73,6 +70,9 @@ const Contact = () => {
                 }
               </Row>
             </form>
+          </Col>
+          <Col md={6}>
+            <img src={contactImg} alt='Contact Us' />
           </Col>
         </Row>
       </Container>
