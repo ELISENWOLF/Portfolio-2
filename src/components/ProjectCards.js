@@ -5,7 +5,7 @@ import '../styles/projects.css'
 
 const ProjectCards = ({ title, imgUrl, github, demo }) => {
   return (
-    <Col sm={6} md={4}>
+    <Col sm={4} md={6}>
       <div className='proj-imgbx'>
         <img src={imgUrl} alt={title} />
         <div className='proj-txt'>

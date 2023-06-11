@@ -112,4 +112,9 @@
     width: 100%;
   }
 
+  @media (max-width: 426px){
+    .contact img {
+      margin-top: 5rem;
+    }
+  }
   

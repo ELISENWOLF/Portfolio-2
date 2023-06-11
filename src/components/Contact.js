@@ -4,11 +4,13 @@ import { BsWhatsapp } from 'react-icons/bs'
 import emailjs from '@emailjs/browser'
 
 import contactImg from '../assets/img/contact-img.svg'
+import mailSend from '../assets/img/send.gif'
 import '../styles/contact.css'
 
 const Contact = () => {
   const [buttonText, setButtonText] = useState('Send')
   const [status, setStatus] = useState({})
+  const [image, setImage] = useState(contactImg)
   const form = useRef();
 
   const handelSubmit = (e) => {
@@ -21,7 +23,11 @@ const Contact = () => {
         setButtonText("Send")
         console.log(result.status);
         if (result.status === 200) {
-          setStatus({ success: true, message: 'Message sebt successfully.' })
+          setStatus({ success: true, message: 'Message sent successfully.' })
+          setImage(mailSend)
+          setTimeout(() => {
+            setImage(contactImg)
+          },5000)
         } else {
           setStatus({ success: false, message: 'Something went wrong, please try again.' })
         }
@@ -72,7 +78,7 @@ const Contact = () => {
             </form>
           </Col>
           <Col md={6}>
-            <img src={contactImg} alt='Contact Us' />
+            <img src={image} alt='Contact Us' />
           </Col>
         </Row>
       </Container>

@@ -1,9 +1,23 @@
 .project {
     padding: 80px 0;
     position: relative;
-    background-image: url(../assets/img/background.jpeg);
-    background-repeat: no-repeat;
+    background-image: url('../assets/img/background.jpeg');
     background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .project-container{
+    position: relative;
+  }
+  .project-box{
+    position: relative;
+    left: 28rem;
+  }
+  .project-image{
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    top: 12.5rem;
+    left: -2rem;
   }
   .project h2 {
       font-size: 45px;
@@ -20,14 +34,14 @@
     width: 56%;
   }
   .project .nav.nav-pills {
-    width: 72%;
+    width: 100%;
     margin: 0 auto;
     border-radius: 50px;
     background-color: rgba(33, 27, 27, 0.9);
     overflow: hidden;
   }
   .project .nav.nav-pills .nav-item {
-    width: 33.33333%;
+    width: 33.333%;
   }
   .project .nav.nav-pills .nav-link {
     background-color: transparent;
@@ -160,6 +174,52 @@
   }
   .proj-btn a:hover::before {
     width: 100%;
+  }
+
+  @media (max-width: 991.98px){
+   .project-image{
+    display: none
+    ;
+   }
+
+   .project-box{
+    width: 100%;
+    position: relative;
+    left: 0rem;
+   }
+  }
+
+  @media (min-width: 992px){
+    .project-image{
+      display: block;
+      position: relative;
+     }
+  
+     .project-box{
+      width: 65%;
+      position: relative;
+      left: 1rem;
+     }
+  }
+  @media (min-width: 1200px){
+    .project-image{
+      display: block;
+     }
+  
+     .project-box{
+      position: relative;
+      left: 0rem;
+     }
+  }
+  @media (min-width: 2000px){
+    .project-image{
+      display: block;
+     }
+  
+     .project-box{
+      position: relative;
+      left: 0rem;
+     } 
   }
 
   

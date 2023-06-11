@@ -43,9 +43,68 @@
     z-index: -4;
   }
 
-  @media (max-width: 991.98px){
-    .img{
+  @media (max-width: 369.98px){
+    .img_side {
       display: none;
+    }
+
+    .skill-bx {
+      margin-top: 15rem;
+    }
+
+    .skill p {
+      margin: 14px 0 0px 0;
+  }
+
+    .img{
+      position: absolute;
+      left: -1.5rem;
+      top: 6.2rem;
+      width: 340px;
+      height: 340px;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: 370px){
+    .img_side {
+      display: none;
+    }
+
+    .skill-bx {
+      margin-top: 15rem;
+    }
+
+    .skill p {
+      margin: 14px 0 0px 0;
+  }
+
+    .img{
+      position: absolute;
+      left: -2.5rem;
+      top: 4.6rem;
+      width: 400px;
+      height: 400px;
+      z-index: 1;
+    }
+  }
+
+  @media (min-width: 765px){
+    .img_side{
+      display: none;
+    }
+
+    .skill-bx {
+      margin-top: 15rem;
+    }
+
+    .img{
+      position: absolute;
+      left: 6rem;
+      top: 0.8rem;
+      width: 550px;
+      height: 550px;
+      z-index: 1;
     }
   }
 
@@ -56,57 +115,70 @@
       left: 12.5rem;
       margin-top: 5rem;
     }
+
+    .img_side {
+      display: block;
+    }
   
     .img{
       position: absolute;
-      left: -10rem;
-      bottom: 3rem;
-      width: 550px;
-      height: 550px;
+      left: -15rem;
+      bottom: 10rem;
+      width: 350px;
+      height: 350px;
       z-index: 1;
+    }
+
+    .img_up{
+      display: none;
     }
   }
   @media (min-width: 1200px){
     .skill-bx {
-      background: rgba(21, 21, 21, 0.932);
-      border-radius: 10px;
-      text-align: center;
-      padding: 60px 50px;
-      margin-top: 60px;
       position: relative;
       width: 90%;
       left: 10.6rem;
       margin-top: 10rem;
     }
+
+    .img_side {
+      display: block;
+    }
   
     .img{
       position: absolute;
-      left: -10rem;
-      bottom: 3rem;
+      left: -15rem;
+      bottom: 10rem;
       z-index: 1;
-      width: 550px;
-      height: 550px;
+      width: 350px;
+      height: 350px;
+    }
+
+    .img_up{
+      display: none;
     }
   }
   @media (min-width: 2000px){
     .skill-bx {
-      background: rgba(21, 21, 21, 0.932);
-      border-radius: 10px;
-      text-align: center;
-      padding: 60px 50px;
-      margin-top: 60px;
       position: relative;
-      width: 100%;
       left: 10.6rem;
       margin-top: 10rem;
+    }
+
+    .img_side {
+      display: block;
     }
   
     .img{
       position: absolute;
-      left: 22.5rem;
-      bottom: 2.5rem;
+      left: -27.5rem;
+      bottom: 0.5rem;
       z-index: 1;
       width: 600px;
       height: 600px;
+    }
+
+    .img_up{
+      display: none;
     }
   }
