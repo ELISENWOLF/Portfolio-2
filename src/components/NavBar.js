@@ -8,6 +8,11 @@ import '../styles/navbar.css'
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home')
   const [scrolled, setScrolled] = useState(false)
+  const [aria, setAria] = useState('false')
+
+  const handleChangeAria = () => {
+    aria === 'false' ? setAria('true') : setAria('false')
+  }
 
   useEffect(() => {
     const onScroll = () => {
@@ -32,7 +37,7 @@ const NavBar = () => {
         <Navbar.Brand href="#home">
           <img src={logo} alt='Logo' />&nbsp;<span className='logoname'>Elisenwolf</span>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
+        <Navbar.Toggle className='aria' aria-controls="basic-navbar-nav" onClick={() => handleChangeAria()} aria-expanded={aria}>
           <span className='navbar-toggler-icon'></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">

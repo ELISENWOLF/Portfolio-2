@@ -178,8 +178,12 @@
 
   @media (max-width: 991.98px){
    .project-image{
-    display: none
-    ;
+    display: block;
+    width: 90%;
+    height: 90%;
+    position: relative;
+    top: 0rem;
+    left: 1rem;
    }
 
    .project-box{
