@@ -1,5 +1,5 @@
 import projectimg1 from '../assets/img/artomic.png'
-// import projectimg2 from '../assets/img/weather.webp'
+import projectimg2 from '../assets/img/weather.png'
 import projectimg3 from '../assets/img/imdb.webp'
 import projectimg4 from '../assets/img/insure.webp'
 import projectimg5 from '../assets/img/slack.webp'
@@ -14,9 +14,9 @@ export const projects = [
     },
     {
         title: "EW Weather",
-        imgUrl: projectimg3,
-        github: "https://github.com/ELISENWOLF/Slack_Clone",
-        demo: "https://elisen-chat.netlify.app/"
+        imgUrl: projectimg2,
+        github: "https://github.com/ELISENWOLF/weather-site",
+        demo: "https://elisenweather.netlify.app/"
     }
     
 ]
