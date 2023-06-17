@@ -57,7 +57,7 @@ const Contact = () => {
                 <Col sm={12} className='px-1'>
                   <textarea name="message" rows="7" placeholder='Your Message' required></textarea>
                 </Col>
-                <Col xxl={6} xl={12} sm={12} className='px-1 contact-btn'>
+                <Col xxl={7} xl={12} sm={12} className='px-1 contact-btn'>
                   <div>
                     <button type='submit'><span>{buttonText}</span></button>
                   </div>

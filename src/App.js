@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Contact from './components/Contact';
 
 import './App.css';
+import Partilce from './components/Partilce';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Projects/>
       <Contact />
       <Footer />
+      <Partilce id='tsparticles'/>
     </div>
   );
 }

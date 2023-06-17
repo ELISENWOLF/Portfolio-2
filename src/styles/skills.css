@@ -1,184 +1,183 @@
 .skill {
-    padding: 0 0 50px 0;
-    position: relative;
-    background-image: url('../assets/img/background.jpeg');
-    background-position: top center;
-    background-size: cover;
-    background-repeat: no-repeat;
+  padding: 0 0 50px 0;
+  position: relative;
+  background-color: #fff;
+  color: #000;
+}
+.skill-bx {
+  background: rgba(177, 177, 177, 0.867);;
+  border-radius: 10px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: 60px;
+  z-index: 10;
+}
+.skill h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+.skill p {
+  color: #464545;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+}
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.skill-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
+}
+
+@media (max-width: 369.98px) {
+  .img_side {
+    display: none;
   }
+
   .skill-bx {
-    background: rgba(21, 21, 21, 0.932);
-    border-radius: 10px;
-    text-align: center;
-    padding: 60px 50px;
-    margin-top: 60px;
+    margin-top: 15rem;
   }
-  .skill h2 {
-      font-size: 45px;
-      font-weight: 700;
-  }
+
   .skill p {
-      color: #B8B8B8;
-      font-size: 18px;
-      letter-spacing: 0.8px;
-      line-height: 1.5em;
-      margin: 14px 0 75px 0;
+    margin: 14px 0 0px 0;
   }
-  .skill-slider {
-    width: 80%;
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  .skill-slider .item img {
-    width: 50%;
-    margin: 0 auto 15px auto;
-  }
-  
-  .background-image-left {
-    top: 28%;
+
+  .img {
     position: absolute;
-    bottom: 0;
-    width: 40%;
-    z-index: -4;
+    left: -1.5rem;
+    top: 6.2rem;
+    width: 340px;
+    height: 340px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: 370px) {
+  .img_side {
+    display: none;
   }
 
-  @media (max-width: 369.98px){
-    .img_side {
-      display: none;
-    }
-
-    .skill-bx {
-      margin-top: 15rem;
-    }
-
-    .skill p {
-      margin: 14px 0 0px 0;
+  .skill-bx {
+    margin-top: 15rem;
   }
 
-    .img{
-      position: absolute;
-      left: -1.5rem;
-      top: 6.2rem;
-      width: 340px;
-      height: 340px;
-      z-index: 1;
-    }
+  .skill p {
+    margin: 14px 0 0px 0;
   }
 
-  @media (min-width: 370px){
-    .img_side {
-      display: none;
-    }
+  .img {
+    position: absolute;
+    left: -2.5rem;
+    top: 4.6rem;
+    width: 400px;
+    height: 400px;
+    z-index: 1;
+  }
+}
 
-    .skill-bx {
-      margin-top: 15rem;
-    }
-
-    .skill p {
-      margin: 14px 0 0px 0;
+@media (min-width: 765px) {
+  .img_side {
+    display: none;
   }
 
-    .img{
-      position: absolute;
-      left: -2.5rem;
-      top: 4.6rem;
-      width: 400px;
-      height: 400px;
-      z-index: 1;
-    }
+  .skill-bx {
+    margin-top: 15rem;
   }
 
-  @media (min-width: 765px){
-    .img_side{
-      display: none;
-    }
+  .img {
+    position: absolute;
+    left: 6rem;
+    top: 0.8rem;
+    width: 550px;
+    height: 550px;
+    z-index: 1;
+  }
+}
 
-    .skill-bx {
-      margin-top: 15rem;
-    }
-
-    .img{
-      position: absolute;
-      left: 6rem;
-      top: 0.8rem;
-      width: 550px;
-      height: 550px;
-      z-index: 1;
-    }
+@media (min-width: 992px) {
+  .skill-bx {
+    width: 80%;
+    position: relative;
+    left: 12.5rem;
+    margin-top: 5rem;
   }
 
-  @media (min-width: 992px){
-    .skill-bx {
-      width: 80%;
-      position: relative;
-      left: 12.5rem;
-      margin-top: 5rem;
-    }
-
-    .img_side {
-      display: block;
-    }
-  
-    .img{
-      position: absolute;
-      left: -15rem;
-      bottom: 10rem;
-      width: 350px;
-      height: 350px;
-      z-index: 1;
-    }
-
-    .img_up{
-      display: none;
-    }
+  .img_side {
+    display: block;
   }
-  @media (min-width: 1200px){
-    .skill-bx {
-      position: relative;
-      width: 90%;
-      left: 10.6rem;
-      margin-top: 10rem;
-    }
 
-    .img_side {
-      display: block;
-    }
-  
-    .img{
-      position: absolute;
-      left: -15rem;
-      bottom: 10rem;
-      z-index: 1;
-      width: 350px;
-      height: 350px;
-    }
-
-    .img_up{
-      display: none;
-    }
+  .img {
+    position: absolute;
+    left: -15rem;
+    bottom: 10rem;
+    width: 350px;
+    height: 350px;
+    z-index: 1;
   }
-  @media (min-width: 2000px){
-    .skill-bx {
-      position: relative;
-      left: 10.6rem;
-      margin-top: 10rem;
-    }
 
-    .img_side {
-      display: block;
-    }
-  
-    .img{
-      position: absolute;
-      left: -27.5rem;
-      bottom: 0.5rem;
-      z-index: 1;
-      width: 600px;
-      height: 600px;
-    }
-
-    .img_up{
-      display: none;
-    }
+  .img_up {
+    display: none;
   }
+}
+@media (min-width: 1200px) {
+  .skill-bx {
+    position: relative;
+    width: 90%;
+    left: 10.6rem;
+    margin-top: 10rem;
+  }
+
+  .img_side {
+    display: block;
+  }
+
+  .img {
+    position: absolute;
+    left: -15rem;
+    bottom: 10rem;
+    z-index: 1;
+    width: 350px;
+    height: 350px;
+  }
+
+  .img_up {
+    display: none;
+  }
+}
+@media (min-width: 2000px) {
+  .skill-bx {
+    position: relative;
+    left: 10.6rem;
+    margin-top: 10rem;
+  }
+
+  .img_side {
+    display: block;
+  }
+
+  .img {
+    position: absolute;
+    left: -27.5rem;
+    bottom: 0.5rem;
+    z-index: 1;
+    width: 600px;
+    height: 600px;
+  }
+
+  .img_up {
+    display: none;
+  }
+}
